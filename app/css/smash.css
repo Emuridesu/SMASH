@@ -1,0 +1,246 @@
+ @charset "UTF-8";
+
+ 
+ 
+
+/*全てのページに適用される*/
+html{
+font-family:  sans-serif;
+}
+html*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0%;
+    overflow-x: hidden;
+}
+
+
+
+
+   
+.watermark:hover{
+    opacity: 0.75;
+}
+   
+
+
+
+
+.menu:hover{
+    opacity: 0.75;
+}
+.menu:active{
+    -webkit-transform:translateY(4px);
+    transform: translateY(4px);/*下に動く*/
+    border-bottom: none;/*線を消す*/
+}
+
+.logo{
+    display: flex;
+    margin: 0;
+   
+}
+@keyframes loop{
+    0%{
+        transform: translateX(100%);
+
+    }
+    to{
+        transform: translateX(-100%);
+
+    }
+}
+@keyframes loop2{
+    0%{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-200%);
+        
+
+    }
+}
+.logo img:first-child{
+    animation: loop 200s - 5s linear infinite;  
+}
+.logo img:last-child{
+    animation: loop2 200s  linear infinite;
+}
+
+
+/* fadein */
+.fadein {
+    opacity: 1;
+    animation-name: fadeout;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+ position: absolute;
+ 
+ 
+  }
+  
+  @keyframes fadeout {
+    0% {
+      opacity: 1;
+    }
+ 
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  /* style */
+  .fadein {
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    color: white;
+    padding: 1rem;
+    margin: auto;
+    text-align: center;
+   
+  }
+.fade3in{
+animation-name: fadeupanime;
+animation-duration: 2s;
+animation-fill-mode: forwards;
+opacity: 0;
+
+}
+@keyframes fadeupanime{
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.kuru{
+    animation-name: rotateanime;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+
+}
+@keyframes rotateanime{
+    from{
+        transform: rotateY(0);
+    }
+    to{
+        transform: rotateY(-360deg);
+    }
+}
+.TOP{
+  position:fixed;
+  margin: 0%;
+top: 0%;
+left: 0;
+  display:inline-block;
+  z-index: 500;
+} 
+.mario{
+  font-family: "YakuHanRPs", "M PLUS Rounded 1c", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;
+}
+.detail{
+  font-family: "YakuHanJP_Noto", "Noto Sans JP", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+}
+
+@media screen and (min-width:769px){
+    /* PC用CSS --------------以上 */
+      .menu-1{
+        display: flex;
+        position: relative;
+        bottom: 12cm;
+        left: 20cm;
+        list-style-type: none;
+        padding: 0%;
+        gap: 5px 50px; /* 余白 */
+    }
+    .menu-2{
+        display: flex;
+        position: relative;
+        bottom: 12cm;
+        left: 20cm;
+        list-style-type: none;
+        padding: 0%;
+        gap: 5px 50px; /* 余白 */
+    }
+    .h3 img{
+        position: relative;
+        bottom: 5cm;
+        width: 600px;
+        filter: drop-shadow(0px 0px 10px rgb(255, 255, 255));
+        border: 1px solid #00000000;
+        border-style:none;
+        }
+        .nav li{
+            display: inline;
+            list-style-type: none;
+            padding-right: 20px;
+            position: relative;
+            bottom:10cm;
+         
+        }
+        .nav2 li{
+            display: inline;
+            list-style-type: none;
+            padding-right: 20px;
+            position: relative;
+            bottom: 0cm;
+         
+        }
+}
+    
+    @media screen and (max-width:769px){
+    /* スマホ用CSS --------------(未満) */
+    .menu-1{
+        display: flex;
+        position: relative;
+        bottom: 200px;
+        width: calc((100% - 6px) / 3);
+        margin-right: 0%;
+        padding-left: 0%;
+        list-style-type: none;
+        gap: 0px 8px; /* 余白 */
+        }
+        .menu-2{
+            display: flex;
+            position: relative;
+            bottom: 200px;
+            width: 100%;
+            margin: 0%;
+            padding-left: 0%;
+            list-style-type: none;
+            gap: 0px 8px; /* 余白 */
+        }
+        .h3 img{
+            position: relative;
+            bottom: 100px;
+            width: 100%;
+            margin-left: 10px;
+            margin-bottom: 150px;
+            filter: drop-shadow(0px 0px 10px rgb(255, 255, 255));
+            border: 1px solid #00000000;
+            border-style:none;
+            }
+            .nav li{
+                display: inline;
+                list-style-type: none;
+                padding-right: 20px;
+                position: relative;
+                bottom:5cm;
+             
+            }
+            .nav2 li{
+                display: inline;
+                list-style-type: none;
+                padding-right: 20px;
+                position: relative;
+                bottom: 0cm;
+             
+            }
+    }
